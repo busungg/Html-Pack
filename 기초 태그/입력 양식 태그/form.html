@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form sumit 할 시 query string 이 붙은 이유는?</h1>
+    <p>기본 method가 Get이기 때문에</p>
+    <form action="">
+        <input type="text" name="search">
+        <input type="submit">
+    </form>
+    <br/>
+    <h1>form Post</h1>
+    <p>Post method는 form data를 통해 parameter 값들을 전송하기 때문에 query string이 보이지 않는다.</p>
+    <form action="" method="POST">
+        <input type="text" name="search">
+        <input type="submit">
+    </form>
+</body>
+</html>
