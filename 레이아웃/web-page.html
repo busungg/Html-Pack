@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 초기화 -->
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+        body {font-family: sans-serif;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+        img {border: 0;}
+    </style>
+
+    <!-- 헤더 -->
+    <style>
+        #main-header {
+            width: 90%;
+            margin: 0 auto;
+            height: 160px;
+            position: relative;
+        }
+
+        #main-header > #title {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+        }
+
+        #main-header > #main-gnb {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #main-header > #main-lnb {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div id="title">
+            <h1>Example Development</h1>
+            <h2>HTML5 + CSS3 Basic</h2>
+        </div>
+        <nav id="main-gnb">
+            <ul>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Game</a></li>
+                <li><a href="#">Simulation</a></li>
+                <li><a href="#">Data</a></li>
+            </ul>
+        </nav>
+        <nav id="main-lnb">
+            <ul>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <section></section>
+        <aside></aside>
+    </div>
+    <footer></footer>
+</body>
+</html>
