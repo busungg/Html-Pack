@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+
     <!-- 초기화 -->
     <style>
         * {
-            margin: 0; 
+            margin: 0;
             padding: 0;
         }
-        body {font-family: sans-serif;}
-        li {list-style: none;}
-        a {text-decoration: none;}
-        img {border: 0;}
+
+        body {
+            font-family: sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
     </style>
 
     <!-- 헤더 -->
@@ -26,25 +42,145 @@
             position: relative;
         }
 
-        #main-header > #title {
+        #main-header>#title {
             position: absolute;
             left: 20px;
             top: 30px;
         }
 
-        #main-header > #main-gnb {
+        #main-header>#main-gnb {
             position: absolute;
             right: 0;
             top: 0;
         }
 
-        #main-header > #main-lnb {
+        #main-header>#main-lnb {
             position: absolute;
             right: 0;
             bottom: 10px;
         }
     </style>
+    <style>
+        #title {
+            font-family: 'Notable', sans-serif;
+        }
+    </style>
+    <style>
+        #main-gnb>ul {
+            overflow: hidden;
+        }
+
+        #main-gnb>ul>li {
+            float: left;
+        }
+
+        #main-gnb>ul>li>a {
+            display: block;
+            padding: 2px 10px;
+            border: 1px solid black;
+        }
+
+        #main-gnb>ul>li:first-child>a {
+            border-radius: 50% 0 0 50%;
+        }
+
+        #main-gnb>ul>li:last-child>a {
+            border-radius: 0 50% 50% 0;
+        }
+    </style>
+    <style>
+        #main-lnb>ul {
+            overflow: hidden;
+        }
+
+        #main-lnb>ul>li {
+            float: left;
+        }
+
+        #main-lnb>ul>li>a {
+            display: block;
+            padding: 2px 10px;
+            border: 1px solid black;
+        }
+
+        #main-lnb>ul>li:first-child>a {
+            border-radius: 50% 0 0 50%;
+        }
+
+        #main-lnb>ul>li:last-child>a {
+            border-radius: 0 50% 50% 0;
+        }
+    </style>
+    <style>
+        #content {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        #content>#main-section {
+            width: 65%;
+            float: left;
+        }
+
+        #content>#main-aside {
+            width: 30%;
+            float: right;
+        }
+    </style>
+    <style>
+        .main-article {
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+    <style>
+        input[type=radio] {
+            display: none;
+        }
+
+        #first:checked ~ div.tab-item:first-of-type {
+            display: block;
+        }
+        #first:checked ~ div.tab-item:last-of-type {
+            display: none;
+        }
+
+        #second:checked ~ div.tab-item:first-of-type {
+            display: none;
+        }
+        #second:checked ~ div.tab-item:last-of-type {
+            display: block;
+        }
+
+        section.buttons {
+            overflow: hidden;
+        }
+        section.buttons > label {
+            display: block;
+            float:left;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid black;
+            background: black;
+            color: white;
+        }
+
+        input:nth-of-type(1):checked ~ section.buttons > label:nth-of-type(1) {
+            background: white;
+            color: black;
+        }
+
+        input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {
+            background: white;
+            color: black;
+        }
+    </style>
 </head>
+
 <body>
     <header id="main-header">
         <div id="title">
@@ -71,9 +207,59 @@
         </nav>
     </header>
     <div id="content">
-        <section></section>
-        <aside></aside>
+        <section id="main-section">
+            <h1>Main Section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam deserunt odit temporibus voluptate
+                autem? Animi, earum dicta. Molestias, distinctio magni. Facere dolorem possimus recusandae soluta
+                voluptatem doloremque natus necessitatibus eos.</p>
+
+            <article class="main-article">
+                <h1>Main Article</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur deserunt odio aliquam omnis facere,
+                    perferendis nemo tenetur non rerum facilis aut, aperiam tempora maxime! Aspernatur voluptatibus
+                    debitis omnis cumque labore.</p>
+            </article>
+            <article class="main-article">
+                <h1>Main Article 2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti error ipsum in, rerum molestias,
+                    cumque, doloremque quo ipsa inventore eligendi officiis voluptatem. Inventore eligendi
+                    necessitatibus, libero odio provident aperiam praesentium?</p>
+            </article>
+            <article class="main-article">
+                <h1>Main Article 3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eos molestiae quo error. Assumenda,
+                    doloremque. Autem ratione, quaerat, repellendus vel quia veritatis modi ab officia eum atque nam quo
+                    similique!</p>
+            </article>
+        </section>
+        <aside id="main-aside">
+            <input type="radio" id="first" name="tab" checked>
+            <input type="radio" id="second" name="tab">
+            <section class="buttons">
+                <label for="first">First</label>
+                <label for="second">Second</label>
+            </section>
+            <div class="tab-item">
+                <ul>
+                    <li><a href="#">HTML5 ul test</a></li>
+                    <li><a href="#">HTML5 ul test</a></li>
+                    <li><a href="#">HTML5 ul test</a></li>
+                    <li><a href="#">HTML5 ul test</a></li>
+                    <li><a href="#">HTML5 ul test</a></li>
+                </ul>
+            </div>
+            <div class="tab-item">
+                <ul>
+                    <li><a href="#">HTML6 will comming soon</a></li>
+                    <li><a href="#">HTML6 will comming soon</a></li>
+                    <li><a href="#">HTML6 will comming soon</a></li>
+                    <li><a href="#">HTML6 will comming soon</a></li>
+                    <li><a href="#">HTML6 will comming soon</a></li>
+                </ul>
+            </div>
+        </aside>
     </div>
     <footer></footer>
 </body>
+
 </html>
